@@ -1,0 +1,281 @@
+@import url(fonts/fonts.css);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 auto 2.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: greyscale;
+  font-size: 24px;
+  display: flex;
+  position: relative;
+  height: 3.45em;
+  font-family: 'SuiesseInt';
+  align-items: baseline;
+  padding: 20px 30px 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 1.1em;
+  user-select: none;
+}
+
+.header__nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: .6em;
+  padding: .9em 1.12em;
+}
+
+.header__link_type_active {
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+.root {
+  max-width: 1440px;
+  min-width: 320px;;
+  margin: 0 auto;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: greyscale;
+  font-family: 'SuiesseInt';
+  font-size: 24px;
+  flex: 1;
+}
+
+.content {
+  max-width: 556px;
+  margin: 0 auto;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+}
+
+.content__title {
+  padding-bottom: 2.5em;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.4em;
+  font-weight: lighter;
+}
+
+.content__subtitle {
+  font-family: 'SuiesseInt-Bold';
+  line-height: 1.4em;
+  font-size: 1em;
+  margin: 0 0 1em;
+}
+
+.content__paragraph {
+  font-size: .6em;
+  line-height: 1.4em;
+  margin: 0 0 1em;
+}
+
+.content__paragraph_type_code {
+  font-family: 'Menlo';
+  font-size: .95em;
+}
+
+.content__paragraph_type_last {
+  margin: 0 0 2.1em;
+}
+
+.content__code {
+  line-height: 1.2em;
+  font-size: .55em;
+  font-family: Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  margin: 0 0 2.1em;
+}
+
+.content__list {
+  padding-inline-start: 1.1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: .6em;
+}
+
+.content__list-items {
+  margin: 0 0 1em;
+}
+
+.content__button {
+  padding: 0;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 20px;
+  border: none;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.content__button:hover {
+  opacity: 0.7;
+}
+
+.content__result {
+  padding: 1.3em 2em;
+  display: flex;
+  border: 1px solid #DCDCDC;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 0 0 1em;
+  font-size: 1.5em;
+}
+
+.content__result-text {
+  margin: auto;
+}
+
+.footer {
+  margin: 4em 0 1.5em;
+  width: 100%;
+  max-width: 2560px;
+  font-size: 14px;
+  display: flex;
+  position: relative;
+  font-family: 'SuiesseInt';
+}
+
+.footer__copyright {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width : 1110px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .header__nav {
+    max-width: 560px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .header__logo {
+    left: .9em;
+  }
+}
+
+@media screen and (max-width : 925px) {
+  .header__logo {
+    left: .4em;
+  }
+}
+
+@media screen and (max-width : 900px) {
+  .header {
+    flex-direction: column;
+    font-size: 18px;
+    align-items: center;
+    height: 7.3em;
+  }
+
+  .header__logo {
+    box-sizing: border-box;
+    position: static;
+    padding: 1.5em;
+    margin-right: 0;
+  }
+
+  .header__nav {
+    justify-content: center;
+  }
+
+  .content {
+    justify-content: end;
+    font-size: 20px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width : 610px) {
+  .content {
+    width: calc(100% - 100px);
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .header {
+    height: 6.3em;
+  }
+
+  .header__logo {
+    padding: 1em;
+  }
+
+  .header__link {
+    padding: .9em 1em;
+  }
+
+  .content__result {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width : 425px) {
+  .header {
+    font-size: 14px;
+  }
+
+  .header__nav {
+    font-size: 14px;
+  }
+
+  .content {
+    width: calc(100% - 50px);
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width : 360px) {
+  .header__link {
+    padding: .6em .7em;
+  }
+}
+
+
+
+
+

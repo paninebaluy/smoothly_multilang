@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smoothly</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../normalize.css">
+  <link href='highlight/styles/atom-one-dark.css' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image" href="../favicon_en.png">
+  <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="../index_en.html" class="header__logo">Smoothly</a>
+    </div>
+    <div class="header__nav">
+      <a href="../index_en.html" class="header__link">How to Link</a>
+      <a href="./basic-usage_en.html" class="header__link header__link_type_active">How to Use</a>
+      <a href="./usage-in-loops_en.html" class="header__link">Looping Animation</a>
+    </div>
+    <div class="header__lang">
+      <a href="./basic-usage.html" class="header__link">RU</a>
+      <a href="./basic-usage_en.html" class="header__link header__link_type_active">EN</a>
+    </div>
+  </header>
+
+  <section class="root">
+    <div class="content">
+
+      <h2 class="content__subtitle">How to Use</h2>
+      <p class="content__paragraph">
+        After linking the library to your code, the <span class="content__paragraph_type_code">smoothly</span> function will be available for you to use. 
+        It takes three arguments:
+      </p>
+      <ul class="content__list">
+        <li class="content__list-items">The element on which you will call the function.</li>
+        <li class="content__list-items">The property of the element that needs to have the smooth transition effect applied to it.</li>
+        <li class="content__list-items">A new value for the property.</li>
+      </ul>
+      <pre><code class="javascript content__code">
+let button = document.querySelector(".button");
+let element = document.querySelector(".element");
+<br>
+button.addEventListener("click", function () {
+  smoothly(element, "textContent", "New content");
+});
+      </code></pre>
+      <p class="content__paragraph content__paragraph_type_last">
+        Click the button to see the result:
+      </p>
+      <button id="button-example-event" class="content__button">Click</button>
+      <div class="content__result">
+        <p id="elem-example-event" class="content__result-text">Old content</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p class="footer__copyright">
+      © Made in 2020 With Love
+    </p>
+  </footer>
+  <script src='./highlight/highlight.pack.js' type='text/javascript'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    let button = document.querySelector('#button-example-event');
+    let element = document.querySelector('#elem-example-event');
+
+    button.addEventListener('click', function() {
+      smoothly(element, 'textContent', 'New content');
+    });
+  </script>
+</body>
+</html>

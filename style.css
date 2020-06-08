@@ -42,6 +42,16 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  margin-right: 6em;
+}
+
+.header__lang {
+  position: absolute;
+  top: 0.85em;
+  right: 1.12em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 .header__link {
@@ -212,6 +222,7 @@ a {
 
   .header__nav {
     justify-content: center;
+    margin-right: 0;
   }
 
   .content {

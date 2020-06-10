@@ -181,6 +181,10 @@ a {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width : 1110px) {
   .header {
     font-size: 20px;
@@ -285,8 +289,4 @@ a {
     padding: .6em .7em;
   }
 }
-
-
-
-
 

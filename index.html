@@ -14,16 +14,17 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const lang = window.navigator.language||navigator.browserLanguage;
+      const url = window.location.href;
       if (window.location.href.includes('index.html') && lang.includes("en-")) {
-        window.location.href = window.location.href.replace("index.html", "en/index.html");
+        url = url.replace("index.html", "en/index.html");
       }
-      if (!window.location.href.includes('index.html') && lang.includes("en-")) {
-        window.location.href = window.location.href + "/en/index.html";
+      if (!url.includes('index.html') && lang.includes("en-")) {
+        url = url + "/en/index.html";
       }
-      if(window.location.href.includes('index.html') && !lang.includes("en-")) {
-        window.location.href = window.location.href.replace("index.html", "ru/index.html"); // Russian version is the default one
+      if(url.includes('index.html') && !lang.includes("en-")) {
+        url = url.replace("index.html", "ru/index.html"); // Russian version is the default one
       } else {
-        window.location.href = window.location.href + "/ru/index.html";
+        url = url + "/ru/index.html";
       }
     });
   </script>

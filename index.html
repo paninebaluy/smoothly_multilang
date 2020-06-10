@@ -19,12 +19,12 @@
         url = url.replace("index.html", "en/index.html");
       }
       if (!url.includes('index.html') && lang.includes("en-")) {
-        url = url + "/en/index.html";
+        url = url + "/en/";
       }
       if(url.includes('index.html') && !lang.includes("en-")) {
         url = url.replace("index.html", "ru/index.html"); // Russian version is the default one
       } else {
-        url = url + "/ru/index.html";
+        url = url + "/ru/";
       }
     });
   </script>

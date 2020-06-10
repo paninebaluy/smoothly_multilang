@@ -28,7 +28,7 @@ Improvements:
 
 Improvements:
  - fix(AutoHotkey): order and extended highlighting (#1579)
- - fix(Go): correctly highlight hex numbers, rather than stopping at last 'd' or 'f'. (#2060)
+ - fix(Go): correctly highlight hex numbers, rather than stopping at last "d" or "f". (#2060)
  - fix(Mathematica): Improvements to language (#2065)
  - fix(Node): Adds SCSS build (#2079)
  - fix(Rust): update keywords (#2052)
@@ -52,7 +52,7 @@ New styles:
 Improvements:
  - fix(powershell): Add cmdlets (#2022)
  - fix(Bash): escaped double quotes (#2041)
- - fix(c++): add aliases 'hh', 'hxx', 'cxx' (#2017)
+ - fix(c++): add aliases "hh", "hxx", "cxx" (#2017)
  - fix(ini/toml): Support comments on the same line. (#2039)
  - fix(JSX): not rendering well in a function without parentheses. (#2024)
  - fix(LiveCode): language definition update (#2021)
@@ -533,7 +533,7 @@ Improvements to existing languages and styles:
 
 - More robust handling of unquoted HTML tag attributes
 - Relevance tuning for QML which was unnecessary eager at seizing other
-  languages' code
+  languages" code
 - Improve GAMS language parsing
 - Fixed a bunch of bugs around selectors in Less
 - Kotlin's got a new definition for annotations, updated keywords and other
@@ -1099,7 +1099,7 @@ Here's what did change in an incompatible way:
 
   ```html
   <script type="text/javascript">
-    hljs.configure({classPrefix: ''});
+    hljs.configure({classPrefix: ""});
     hljs.initHighlightingOnLoad();
   </script>
   ```
@@ -1121,7 +1121,7 @@ Here's what did change in an incompatible way:
 Another technically compatible change that nonetheless might need attention:
 
 - The structure of the NPM package was refactored, so if you had installed it
-  locally, you'll have to update your paths. The usual `require('highlight.js')`
+  locally, you'll have to update your paths. The usual `require("highlight.js")`
   works as before. This is contributed by [Dmitry Smolin][].
 
 New features:
@@ -1530,9 +1530,9 @@ The most significant change is the ability to include language submodes right
 under `contains` instead of defining explicit named submodes in the main array:
 
     contains: [
-      'string',
-      'number',
-      {begin: '\\n', end: hljs.IMMEDIATE_RE}
+      "string",
+      "number",
+      {begin: "\\n", end: hljs.IMMEDIATE_RE}
     ]
 
 This is useful for auxiliary modes needed only in one place to define parsing.
@@ -1889,7 +1889,7 @@ already downloaded that one!
 
 - added highlighting for Javascript
 - at last fixed parsing of Delphi's escaped apostrophes in strings
-- in Ruby fixed highlighting of keywords 'def' and 'class', same for 'sub' in
+- in Ruby fixed highlighting of keywords "def" and "class", same for "sub" in
   Perl
 
 

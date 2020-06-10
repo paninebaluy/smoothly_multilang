@@ -43,8 +43,8 @@ Highlight.js — это инструмент для подсветки синт�
 с использованием `document.addEventListener`:
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((block) => {
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.querySelectorAll("pre code").forEach((block) => {
     hljs.highlightBlock(block);
   });
 });
@@ -57,7 +57,7 @@ highlight.js использовать для них тег `<br>`:
 ```js
 hljs.configure({useBR: true});
 
-document.querySelectorAll('div.code').forEach((block) => {
+document.querySelectorAll("div.code").forEach((block) => {
   hljs.highlightBlock(block);
 });
 ```
@@ -67,15 +67,15 @@ document.querySelectorAll('div.code').forEach((block) => {
 
 ## Web Workers
 
-Подсветку можно запустить внутри web worker'а, чтобы окно
+Подсветку можно запустить внутри web worker"а, чтобы окно
 браузера не подтормаживало при работе с большими кусками кода.
 
 В основном скрипте:
 
 ```js
-addEventListener('load', () => {
-  const code = document.querySelector('#code');
-  const worker = new Worker('worker.js');
+addEventListener("load", () => {
+  const code = document.querySelector("#code");
+  const worker = new Worker("worker.js");
   worker.onmessage = (event) => { code.innerHTML = event.data; }
   worker.postMessage(code.textContent);
 });
@@ -85,7 +85,7 @@ addEventListener('load', () => {
 
 ```js
 onmessage = (event) => {
-  importScripts('<path>/highlight.pack.js');
+  importScripts("<path>/highlight.pack.js");
   const result = self.hljs.highlightAuto(event.data);
   postMessage(result.value);
 };

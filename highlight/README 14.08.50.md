@@ -239,8 +239,8 @@ Here’s an equivalent way to calling [`initHighlightingOnLoad`][1] using
 vanilla JS:
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((block) => {
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.querySelectorAll("pre code").forEach((block) => {
     hljs.highlightBlock(block);
   });
 });
@@ -253,7 +253,7 @@ configure highlight.js to use the `<br>` tag:
 ```js
 hljs.configure({useBR: true});
 
-document.querySelectorAll('div.code').forEach((block) => {
+document.querySelectorAll("div.code").forEach((block) => {
   hljs.highlightBlock(block);
 });
 ```
@@ -269,9 +269,9 @@ window while dealing with very big chunks of code.
 In your main script:
 
 ```js
-addEventListener('load', () => {
-  const code = document.querySelector('#code');
-  const worker = new Worker('worker.js');
+addEventListener("load", () => {
+  const code = document.querySelector("#code");
+  const worker = new Worker("worker.js");
   worker.onmessage = (event) => { code.innerHTML = event.data; }
   worker.postMessage(code.textContent);
 });
@@ -281,7 +281,7 @@ In worker.js:
 
 ```js
 onmessage = (event) => {
-  importScripts('<path>/highlight.pack.js');
+  importScripts("<path>/highlight.pack.js");
   const result = self.hljs.highlightAuto(event.data);
   postMessage(result.value);
 };
@@ -331,22 +331,22 @@ npm install highlight.js --save
 In your application:
 
 ```js
-import hljs from 'highlight.js';
+import hljs from "highlight.js";
 ```
 
 The default import imports all languages! Therefore it is likely to be more efficient to import only the library and the languages you need:
 
 ```js
-import hljs from 'highlight.js/lib/highlight';
-import javascript from 'highlight.js/lib/languages/javascript';
-hljs.registerLanguage('javascript', javascript);
+import hljs from "highlight.js/lib/highlight";
+import javascript from "highlight.js/lib/languages/javascript";
+hljs.registerLanguage("javascript", javascript);
 ```
 
 To set the syntax highlighting style, if your build tool processes CSS from your JavaScript entry point, you can import the stylesheet directly into your CommonJS-module:
 
 ```js
-import hljs from 'highlight.js/lib/highlight';
-import 'highlight.js/styles/github.css';
+import hljs from "highlight.js/lib/highlight";
+import "highlight.js/styles/github.css";
 ```
 
 ## License

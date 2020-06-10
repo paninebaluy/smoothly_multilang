@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'SuiesseInt';
+  font-family: "SuiesseInt";
   src: url(./SuisseIntl-Book_1.woff);
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'SuiesseInt-Bold';
+  font-family: "SuiesseInt-Bold";
   src: url(./SuisseIntl-Bold.woff);
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Menlo';
+  font-family: "Menlo";
   src: url(./Menlo-Regular.woff);
   font-weight: normal;
 }

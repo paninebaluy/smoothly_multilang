@@ -1,6 +1,7 @@
 # Smoothly Bilingual
 
-Based on a RU-only web site. 
+Based on a RU-only web site.
+
 **URL:** https://smoothly.now.sh/
 
 **Added features:**

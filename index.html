@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru-RU, en-US">
+<html lang="ru-RU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,73 +8,18 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
   <link href='highlight/styles/atom-one-dark.css' rel='stylesheet' type='text/css'>
-  <link rel="icon" type="image" href="favicon.png" lang="ru" id="favicon-ru">
-  <link rel="icon" type="image" href="favicon_en.png" lang="en" id="favicon-en">
+  <link rel="icon" type="image" href="favicon.png">
 </head>
-
 <body>
-  <header class="header" lang="ru" id="header-ru">
-    <div class="header__logo">
-      <a href="./index.html" class="header__logo">Smoothly</a>
-    </div>
-    <div class="header__nav">
-      <a href="./index.html" class="header__link header__link_type_active">Как подключить</a>
-      <a href="./pages/basic-usage.html" class="header__link">Как пользоваться</a>
-      <a href="./pages/usage-in-loops.html" class="header__link">Использование в цикле</a>
-    </div>
-    <div class="header__lang">
-      <a href="#" class="header__link header__button header__link_type_active">RU</a>
-      <a href="#" class="header__link header__button">EN</a>
-    </div>
-  </header>
-  
-  <header class="header" lang="en" id="header-en">
-    <div class="header__logo">
-      <a href="./index.html" class="header__logo">Smoothly</a>
-    </div>
-    <div class="header__nav">
-      <a href="./index.html" class="header__link header__link_type_active">How to Link</a>
-      <a href="./pages/basic-usage.html" class="header__link">How to Use</a>
-      <a href="./pages/usage-in-loops.html" class="header__link">Looping Animation</a>
-    </div>
-    <div class="header__lang">
-      <a href="#" class="header__link header__button">RU</a>
-      <a href="#" class="header__link header__button header__link_type_active">EN</a>
-    </div>
-  </header>
-
-  <section class="root" lang="ru" id="root-ru">
-    <div class="content">
-      <h1 class="content__title">Smoothly — библиотека для простой анимации HTML-элементов и их содержимого.</h1>
-      <h2 class="content__subtitle">Как подключить</h2>
-      <p class="content__paragraph content__paragraph_type_last">
-        Добавьте в HTML-код страницы тег <span class="content__paragraph_type_code">script</span> со ссылкой на Smoothly
-      </p>
-    <pre><code class="html content__code">
-&#x3C;script src=&#x22;https://code.s3.yandex.net/web-code/smoothly.js&#x22;&#x3E;&#x3C;/script&#x3E;
-      </code></pre>
-  </section>
-
-  <section class="root" lang="en" id="root-en">
-    <div class="content">
-      <h1 class="content__title">Smoothly is a library for simple and elegant animation of HTML elements and their content.</h1>
-      <h2 class="content__subtitle">How to Link</h2>
-      <p class="content__paragraph content__paragraph_type_last">
-        Add the <span class="content__paragraph_type_code">script</span> tag with the link to Smoothly to the HTML code of your page:
-      </p>
-    <pre><code class="html content__code">
-&#x3C;script src=&#x22;https://code.s3.yandex.net/web-code/smoothly.js&#x22;&#x3E;&#x3C;/script&#x3E;
-      </code></pre>
-  </section>
-
-  <footer class="footer">
-    <p class="footer__copyright">
-      © Made in 2020 With Love
-    </p>
-  </footer>
-
-  <script src='./script.js'></script>
-  <script src='./highlight/highlight.pack.js' type='text/javascript'></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = window.navigator.language||navigator.browserLanguage;
+      if(lang.includes("en-")) {
+        window.location.href = window.location.href.replace("index.html", "en/index.html");
+      } else {
+        window.location.href = window.location.href.replace("index.html", "ru/index.html"); // Russian version is the default one
+      }
+    });
+  </script>
 </body>
 </html>

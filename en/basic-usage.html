@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru-RU, en-US">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,75 +7,29 @@
   <title>Smoothly</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../normalize.css">
-  <link href='highlight/styles/atom-one-dark.css' rel='stylesheet' type='text/css'>
-  <link rel="icon" type="image" href="../favicon.png">
+  <link href='../highlight/styles/atom-one-dark.css' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image" href="../favicon_en.png">
   <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
 
 </head>
 <body>
-  <header class="header" lang="ru" id="header-ru">
+  <header class="header">
     <div class="header__logo">
-      <a href="../index.html" class="header__logo">Smoothly</a>
+      <a href="./index.html" class="header__logo">Smoothly</a>
     </div>
     <div class="header__nav">
-      <a href="../index.html" class="header__link">Как подключить</a>
-      <a href="./basic-usage.html" class="header__link header__link_type_active">Как пользоваться</a>
-      <a href="./usage-in-loops.html" class="header__link">Использование в цикле</a>
-    </div>
-    <div class="header__lang">
-      <a href="#" class="header__link header__button header__link_type_active">RU</a>
-      <a href="#" class="header__link header__button">EN</a>
-    </div>
-  </header>
-
-  <header class="header" lang="en" id="header-en">
-    <div class="header__logo">
-      <a href="../index.html" class="header__logo">Smoothly</a>
-    </div>
-    <div class="header__nav">
-      <a href="../index.html" class="header__link">How to Link</a>
+      <a href="./index.html" class="header__link">How to Link</a>
       <a href="./basic-usage.html" class="header__link header__link_type_active">How to Use</a>
       <a href="./usage-in-loops.html" class="header__link">Looping Animation</a>
     </div>
     <div class="header__lang">
-      <a href="#" class="header__link header__button">RU</a>
-      <a href="#" class="header__link header__button header__link_type_active">EN</a>
+      <a href="../ru/basic-usage.html" class="header__link header__button">RU</a>
+      <a href="./basic-usage.html" class="header__link header__button header__link_type_active">EN</a>
     </div>
   </header>
 
-  <section class="root" lang="ru" id="root-ru">
+  <section class="root">
     <div class="content">
-
-      <h2 class="content__subtitle">Как пользоваться</h2>
-      <p class="content__paragraph">
-        После подключения библиотеки в коде станет доступна функция <span class="content__paragraph_type_code">smoothly</span>.
-        Она принимает три аргумента:
-      </p>
-      <ul class="content__list">
-        <li class="content__list-items">Элемент, к которому собираетесь применить эффект;</li>
-        <li class="content__list-items">Свойство элемента, которое должно плавно измениться;</li>
-        <li class="content__list-items">Новое значение свойства.</li>
-      </ul>
-      <pre><code class="javascript content__code">
-let button = document.querySelector('.button');
-let element = document.querySelector('.element');
-<br>
-button.addEventListener('click', function () {
-  smoothly(element, 'textContent', 'Новое содержимое');
-});
-      </code></pre>
-      <p class="content__paragraph content__paragraph_type_last">
-        Нажмите на кнопку, чтобы увидеть результат:
-      </p>
-      <button id="button-example-event-ru" class="content__button">Нажмите</button>
-      <div class="content__result">
-        <p id="elem-example-event-ru" class="content__result-text">Старое содержимое</p>
-      </div>
-    </div>
-  </section>
-  <section class="root" lang="en" id="root-en">
-    <div class="content">
-
       <h2 class="content__subtitle">How to Use</h2>
       <p class="content__paragraph">
         After linking the library to your code, the <span class="content__paragraph_type_code">smoothly</span> function will be available for you to use. 
@@ -97,9 +51,9 @@ button.addEventListener("click", function () {
       <p class="content__paragraph content__paragraph_type_last">
         Click the button to see the result:
       </p>
-      <button id="button-example-event-en" class="content__button">Click</button>
+      <button id="button-example-event" class="content__button">Click</button>
       <div class="content__result">
-        <p id="elem-example-event-en" class="content__result-text">Old content</p>
+        <p id="elem-example-event" class="content__result-text">Old content</p>
       </div>
     </div>
   </section>
@@ -112,16 +66,10 @@ button.addEventListener("click", function () {
   <script src="../highlight/highlight.pack.js" type='text/javascript'></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
-    let ruButton = document.querySelector('#button-example-event-ru');
-    let ruElement = document.querySelector('#elem-example-event-ru');
-    let enButton = document.querySelector('#button-example-event-en');
-    let enElement = document.querySelector('#elem-example-event-en');
-
-    ruButton.addEventListener('click', function() {
-      smoothly(ruElement, 'textContent', 'Новое содержимое');
-    });
-    enButton.addEventListener('click', function() {
-      smoothly(enElement, 'textContent', 'New content');
+    let button = document.querySelector('#button-example-event');
+    let element = document.querySelector('#elem-example-event');
+    button.addEventListener('click', function() {
+      smoothly(element, 'textContent', 'New content');
     });
   </script>
 </body>

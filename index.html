@@ -18,12 +18,12 @@
         window.location.href = window.location.href.replace("index.html", "en/index.html");
       }
       if (!window.location.href.includes('index.html') && lang.includes("en-")) {
-        window.location.href = window.location.href + "en/index.html";
+        window.location.href = window.location.href + "/en/index.html";
       }
       if(window.location.href.includes('index.html') && !lang.includes("en-")) {
         window.location.href = window.location.href.replace("index.html", "ru/index.html"); // Russian version is the default one
       } else {
-        window.location.href = window.location.href + "ru/index.html";
+        window.location.href = window.location.href + "/ru/index.html";
       }
     });
   </script>

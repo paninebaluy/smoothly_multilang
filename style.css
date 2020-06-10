@@ -123,6 +123,10 @@ a {
   margin: 0 0 2.1em;
 }
 
+.content__code_type_html {
+  width: 102%;
+}
+
 .content__list {
   padding-inline-start: 1.1em;
   margin-block-start: 0;
@@ -262,6 +266,10 @@ a {
 
   .content__result {
     font-size: 1em;
+  }
+
+  .content__code_type_html {
+    width: 90%;
   }
 }
 

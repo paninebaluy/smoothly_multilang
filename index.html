@@ -15,9 +15,9 @@
     document.addEventListener("DOMContentLoaded", () => {
       const lang = window.navigator.language||navigator.browserLanguage;
       if (lang.includes("en-")) {
-        window.location.href = window.location.host.toString() + "/en/index.html";
+        window.location.assign(window.location.host.toString() + "/en/index.html");
       } else {
-        window.location.href = window.location.host.toString() + "/ru/index.html";
+        window.location.assign(window.location.host.toString() + "/ru/index.html");
       }
     });
   </script>

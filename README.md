@@ -2,7 +2,8 @@
 
 Based on a RU-only website.
 
-*version 3.0.5:* fixed flexbox display on older iPhones
+**version 3.0.5.** fixed flexbox display on older iPhones
+
 **URL:** https://smoothly.now.sh/
 
 **Added features:**

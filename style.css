@@ -2,7 +2,7 @@
 
 html, body {
   height: 100%;
-  /* -webkit-margin-top-collapse: discard; */
+  -webkit-margin-collapse: discard;
 }
 
 body {

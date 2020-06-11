@@ -75,7 +75,7 @@ a {
   -moz-font-smoothing: greyscale;
   font-family: "SuiesseInt";
   font-size: 24px;
-  flex: 1;
+  /* flex: 1; */
 }
 
 .content {

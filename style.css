@@ -7,6 +7,8 @@ html, body {
 
 body {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   min-height: 100vh;
   flex-direction: column;
 }
@@ -25,6 +27,8 @@ a {
   -moz-font-smoothing: greyscale;
   font-size: 24px;
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   position: relative;
   height: 3.45em;
   font-family: "SuiesseInt";
@@ -69,6 +73,8 @@ a {
 
 .root {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   max-width: 1440px;
   min-width: 320px;;
   margin: 0 auto;
